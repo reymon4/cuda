@@ -34,7 +34,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 9,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -86,7 +86,8 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -136,7 +137,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -152,6 +154,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "main_cl.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

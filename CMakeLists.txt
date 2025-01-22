@@ -4,9 +4,16 @@ project(cuda CUDA)
 set(CMAKE_CUDA_STANDARD 17)
 enable_language(CXX CUDA)
 add_executable(cuda kernel.cu
-        main.cpp)
+        main.cpp
+        main_cl.cpp)
 
 target_include_directories(cuda PUBLIC ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 set_target_properties(cuda PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)
 
+##############
+find_package(OpenCL REQUIRED)
+add_executable(cl main_cl.cpp)
+target_link_libraries(cl ${OpenCL_LIBRARIES})
+
+target_include_directories(cl PUBLIC ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
